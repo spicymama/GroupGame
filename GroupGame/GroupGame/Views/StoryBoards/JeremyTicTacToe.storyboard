@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fxy-x2-lGu">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -8,23 +8,196 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Tic Tac Toe View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController id="Y6W-OH-hqX" customClass="TicTacToeViewController" customModule="GroupGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ticTacToeBoard" translatesAutoresizingMaskIntoConstraints="NO" id="s0H-FS-K1u">
+                                <rect key="frame" x="20.5" y="288.5" width="373" height="373"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="s0H-FS-K1u" secondAttribute="height" multiplier="1:1" id="zwN-Xj-Twk"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="y2V-lg-cBf">
+                                <rect key="frame" x="32.5" y="304.5" width="347" height="96.5"/>
+                                <subviews>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d3A-za-2Zx" userLabel="x1">
+                                        <rect key="frame" x="0.0" y="0.0" width="96.5" height="96.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="96" id="SCz-St-OB8"/>
+                                            <constraint firstAttribute="width" secondItem="d3A-za-2Zx" secondAttribute="height" multiplier="1:1" id="SR7-Ny-bJg"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="gameFunction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="LWO-vD-jeG"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TzT-1n-7PJ" userLabel="x2">
+                                        <rect key="frame" x="126.5" y="0.0" width="96.5" height="96.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="96" id="hZi-e3-Rea"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="gameFunction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Jco-pF-avg"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aww-0j-4lr" userLabel="x3">
+                                        <rect key="frame" x="253" y="0.0" width="94" height="96.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="96" id="k8Z-rR-bVu"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="gameFunction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="6FB-yG-kqZ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="aww-0j-4lr" firstAttribute="width" secondItem="aww-0j-4lr" secondAttribute="height" multiplier="1:1" id="Wgh-te-pYe"/>
+                                    <constraint firstItem="TzT-1n-7PJ" firstAttribute="width" secondItem="TzT-1n-7PJ" secondAttribute="height" multiplier="1:1" id="tDI-2t-9gx"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="30" id="Bgk-t7-12K">
+                                <rect key="frame" x="32" y="427" width="348" height="96"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pd3-qj-3S1" userLabel="x4">
+                                        <rect key="frame" x="0.0" y="0.0" width="96" height="96"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="pd3-qj-3S1" secondAttribute="height" multiplier="1:1" id="0uJ-iS-92B"/>
+                                            <constraint firstAttribute="width" constant="96" id="k2F-mf-ExS"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="gameFunction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="YPY-I2-3uG"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bWE-sp-bYI" userLabel="x5">
+                                        <rect key="frame" x="126" y="0.0" width="96" height="96"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="96" id="dpV-Wk-xDg"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="gameFunction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="NTl-Yp-qbm"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kCY-Fy-YNQ" userLabel="x6">
+                                        <rect key="frame" x="252" y="0.0" width="96" height="96"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="96" id="CFl-Zi-CfA"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="gameFunction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="SE1-gQ-7Ka"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <viewLayoutGuide key="safeArea" id="H4y-J6-VJp"/>
+                                <constraints>
+                                    <constraint firstItem="bWE-sp-bYI" firstAttribute="width" secondItem="bWE-sp-bYI" secondAttribute="height" multiplier="1:1" id="tnC-kf-bvb"/>
+                                    <constraint firstItem="kCY-Fy-YNQ" firstAttribute="width" secondItem="kCY-Fy-YNQ" secondAttribute="height" multiplier="1:1" id="y3t-nI-ei3"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="30" id="1py-8m-Wat">
+                                <rect key="frame" x="32" y="549" width="348" height="96"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L3g-tc-XL6" userLabel="x7">
+                                        <rect key="frame" x="0.0" y="0.0" width="96" height="96"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="L3g-tc-XL6" secondAttribute="height" multiplier="1:1" id="H9I-D3-d4A"/>
+                                            <constraint firstAttribute="width" constant="96" id="hdc-hf-doS"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="gameFunction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ynP-zd-2Jq"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bx0-B0-3ZH" userLabel="x8">
+                                        <rect key="frame" x="126" y="0.0" width="96" height="96"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="96" id="8Ft-Qv-CjJ"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="gameFunction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Ikv-Zk-0gf"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oLk-0q-vHo" userLabel="x9">
+                                        <rect key="frame" x="252" y="0.0" width="96" height="96"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="96" id="3bM-Ct-8XV"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="gameFunction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="fEg-LB-nKC"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <viewLayoutGuide key="safeArea" id="zLf-Eb-hVJ"/>
+                                <constraints>
+                                    <constraint firstItem="oLk-0q-vHo" firstAttribute="width" secondItem="oLk-0q-vHo" secondAttribute="height" multiplier="1:1" id="0or-79-A8Y"/>
+                                    <constraint firstItem="Bx0-B0-3ZH" firstAttribute="width" secondItem="Bx0-B0-3ZH" secondAttribute="height" multiplier="1:1" id="73Z-C9-74H"/>
+                                </constraints>
+                            </stackView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cAb-SZ-kUa">
+                                <rect key="frame" x="165" y="178" width="85" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="PLAY AGAIN"/>
+                                <connections>
+                                    <action selector="playAgainButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="3S7-ID-azA"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="(winnerLabel)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gOV-Ay-dlM">
+                                <rect key="frame" x="154" y="120" width="105" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1py-8m-Wat" firstAttribute="centerX" secondItem="y2V-lg-cBf" secondAttribute="centerX" id="BUj-Vk-8g3"/>
+                            <constraint firstItem="s0H-FS-K1u" firstAttribute="centerY" secondItem="vDu-zF-Fre" secondAttribute="centerY" id="R4Q-nF-dgu"/>
+                            <constraint firstItem="s0H-FS-K1u" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="Tc8-zZ-5IU"/>
+                            <constraint firstItem="Bgk-t7-12K" firstAttribute="centerX" secondItem="y2V-lg-cBf" secondAttribute="centerX" id="i8v-7A-bSB"/>
+                            <constraint firstItem="Bgk-t7-12K" firstAttribute="top" secondItem="y2V-lg-cBf" secondAttribute="bottom" constant="26" id="lUZ-Xv-IeQ"/>
+                            <constraint firstItem="y2V-lg-cBf" firstAttribute="leading" secondItem="s0H-FS-K1u" secondAttribute="leading" constant="12" id="lc7-34-XMS"/>
+                            <constraint firstItem="y2V-lg-cBf" firstAttribute="top" secondItem="s0H-FS-K1u" secondAttribute="top" constant="16" id="ocE-IV-GnZ"/>
+                            <constraint firstItem="s0H-FS-K1u" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.9" id="t3e-vC-LXh"/>
+                            <constraint firstItem="1py-8m-Wat" firstAttribute="top" secondItem="Bgk-t7-12K" secondAttribute="bottom" constant="24" id="z4J-X5-RYf"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="PN0-4T-45q"/>
+                    <connections>
+                        <outlet property="playAgainButton" destination="cAb-SZ-kUa" id="xJs-X2-C6p"/>
+                        <outlet property="winnerLabel" destination="gOV-Ay-dlM" id="cwf-iN-IuZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="103"/>
+            <point key="canvasLocation" x="1047.8260869565217" y="102.45535714285714"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="0Ja-Mu-jyO">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fxy-x2-lGu" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1Xz-Xs-AtI">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="eJf-Xk-WaL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dy7-zj-5uh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="102.45535714285714"/>
         </scene>
     </scenes>
     <resources>
+        <image name="ticTacToeBoard" width="1078" height="1068"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

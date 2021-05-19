@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2C59685E26558AD60075CE13 /* JeremyTicTacToe.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C59685D26558AD60075CE13 /* JeremyTicTacToe.storyboard */; };
+		2C59686026558F700075CE13 /* TicTacToeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C59685F26558F700075CE13 /* TicTacToeViewController.swift */; };
 		EACF1767265585A000BD7A8E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACF1766265585A000BD7A8E /* AppDelegate.swift */; };
 		EACF1769265585A000BD7A8E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACF1768265585A000BD7A8E /* SceneDelegate.swift */; };
 		EACF1770265585A100BD7A8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EACF176F265585A100BD7A8E /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 
 /* Begin PBXFileReference section */
 		2C59685D26558AD60075CE13 /* JeremyTicTacToe.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = JeremyTicTacToe.storyboard; sourceTree = "<group>"; };
+		2C59685F26558F700075CE13 /* TicTacToeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeViewController.swift; sourceTree = "<group>"; };
 		EACF1763265585A000BD7A8E /* GroupGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GroupGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EACF1766265585A000BD7A8E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EACF1768265585A000BD7A8E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 		2C59685C2655896D0075CE13 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				2C59685F26558F700075CE13 /* TicTacToeViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -190,6 +193,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C59686026558F700075CE13 /* TicTacToeViewController.swift in Sources */,
 				EACF1767265585A000BD7A8E /* AppDelegate.swift in Sources */,
 				EACF1769265585A000BD7A8E /* SceneDelegate.swift in Sources */,
 			);
