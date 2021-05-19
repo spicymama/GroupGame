@@ -37,13 +37,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2C5968552655896C0075CE13 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		2C5968562655896C0075CE13 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -75,17 +68,9 @@
 		2C59685A2655896D0075CE13 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				2C59685B2655896D0075CE13 /* Model Controllers */,
 				2C59685C2655896D0075CE13 /* View Controllers */,
 			);
 			path = Controllers;
-			sourceTree = "<group>";
-		};
-		2C59685B2655896D0075CE13 /* Model Controllers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Model Controllers";
 			sourceTree = "<group>";
 		};
 		2C59685C2655896D0075CE13 /* View Controllers */ = {
@@ -115,7 +100,6 @@
 		EACF1765265585A000BD7A8E /* GroupGame */ = {
 			isa = PBXGroup;
 			children = (
-				2C5968552655896C0075CE13 /* Models */,
 				2C5968572655896C0075CE13 /* Views */,
 				2C59685A2655896D0075CE13 /* Controllers */,
 				2C5968562655896C0075CE13 /* Resources */,
