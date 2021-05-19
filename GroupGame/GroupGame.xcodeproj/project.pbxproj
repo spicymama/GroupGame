@@ -7,20 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA98ABDB26558FE6001F241C /* TicTacToeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA98ABDA26558FE6001F241C /* TicTacToeViewController.swift */; };
 		EACF1767265585A000BD7A8E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACF1766265585A000BD7A8E /* AppDelegate.swift */; };
 		EACF1769265585A000BD7A8E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACF1768265585A000BD7A8E /* SceneDelegate.swift */; };
-		EACF176B265585A000BD7A8E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACF176A265585A000BD7A8E /* ViewController.swift */; };
-		EACF176E265585A000BD7A8E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EACF176C265585A000BD7A8E /* Main.storyboard */; };
+		EACF176E265585A000BD7A8E /* Gavin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EACF176C265585A000BD7A8E /* Gavin.storyboard */; };
 		EACF1770265585A100BD7A8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EACF176F265585A100BD7A8E /* Assets.xcassets */; };
 		EACF1773265585A100BD7A8E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EACF1771265585A100BD7A8E /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EA98ABDA26558FE6001F241C /* TicTacToeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeViewController.swift; sourceTree = "<group>"; };
 		EACF1763265585A000BD7A8E /* GroupGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GroupGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EACF1766265585A000BD7A8E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EACF1768265585A000BD7A8E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EACF176A265585A000BD7A8E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		EACF176D265585A000BD7A8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EACF176D265585A000BD7A8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Gavin.storyboard; sourceTree = "<group>"; };
 		EACF176F265585A100BD7A8E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EACF1772265585A100BD7A8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EACF1774265585A100BD7A8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -56,15 +56,55 @@
 		EACF1765265585A000BD7A8E /* GroupGame */ = {
 			isa = PBXGroup;
 			children = (
+				EACF17802655890100BD7A8E /* Views */,
+				EACF17832655898300BD7A8E /* Controllers */,
+				EACF177D265588EE00BD7A8E /* Resources */,
+			);
+			path = GroupGame;
+			sourceTree = "<group>";
+		};
+		EACF177D265588EE00BD7A8E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				EACF1766265585A000BD7A8E /* AppDelegate.swift */,
 				EACF1768265585A000BD7A8E /* SceneDelegate.swift */,
-				EACF176A265585A000BD7A8E /* ViewController.swift */,
-				EACF176C265585A000BD7A8E /* Main.storyboard */,
 				EACF176F265585A100BD7A8E /* Assets.xcassets */,
 				EACF1771265585A100BD7A8E /* LaunchScreen.storyboard */,
 				EACF1774265585A100BD7A8E /* Info.plist */,
 			);
-			path = GroupGame;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		EACF17802655890100BD7A8E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EACF17812655892500BD7A8E /* Storyboards */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EACF17812655892500BD7A8E /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				EACF176C265585A000BD7A8E /* Gavin.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		EACF17832655898300BD7A8E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EACF17842655898A00BD7A8E /* View Controllers */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		EACF17842655898A00BD7A8E /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EA98ABDA26558FE6001F241C /* TicTacToeViewController.swift */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,7 +166,7 @@
 			files = (
 				EACF1773265585A100BD7A8E /* LaunchScreen.storyboard in Resources */,
 				EACF1770265585A100BD7A8E /* Assets.xcassets in Resources */,
-				EACF176E265585A000BD7A8E /* Main.storyboard in Resources */,
+				EACF176E265585A000BD7A8E /* Gavin.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,7 +177,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EACF176B265585A000BD7A8E /* ViewController.swift in Sources */,
+				EA98ABDB26558FE6001F241C /* TicTacToeViewController.swift in Sources */,
 				EACF1767265585A000BD7A8E /* AppDelegate.swift in Sources */,
 				EACF1769265585A000BD7A8E /* SceneDelegate.swift in Sources */,
 			);
@@ -146,12 +186,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		EACF176C265585A000BD7A8E /* Main.storyboard */ = {
+		EACF176C265585A000BD7A8E /* Gavin.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				EACF176D265585A000BD7A8E /* Base */,
 			);
-			name = Main.storyboard;
+			name = Gavin.storyboard;
 			sourceTree = "<group>";
 		};
 		EACF1771265585A100BD7A8E /* LaunchScreen.storyboard */ = {
@@ -288,7 +328,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SP8PT7VLP6;
-				INFOPLIST_FILE = GroupGame/Info.plist;
+				INFOPLIST_FILE = GroupGame/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,7 +347,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SP8PT7VLP6;
-				INFOPLIST_FILE = GroupGame/Info.plist;
+				INFOPLIST_FILE = GroupGame/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
