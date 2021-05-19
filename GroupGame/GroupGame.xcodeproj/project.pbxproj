@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		EACF1767265585A000BD7A8E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACF1766265585A000BD7A8E /* AppDelegate.swift */; };
 		EACF1769265585A000BD7A8E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACF1768265585A000BD7A8E /* SceneDelegate.swift */; };
-		EACF176B265585A000BD7A8E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACF176A265585A000BD7A8E /* ViewController.swift */; };
 		EACF176E265585A000BD7A8E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EACF176C265585A000BD7A8E /* Main.storyboard */; };
 		EACF1770265585A100BD7A8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EACF176F265585A100BD7A8E /* Assets.xcassets */; };
 		EACF1773265585A100BD7A8E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EACF1771265585A100BD7A8E /* LaunchScreen.storyboard */; };
@@ -19,7 +18,6 @@
 		EACF1763265585A000BD7A8E /* GroupGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GroupGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EACF1766265585A000BD7A8E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EACF1768265585A000BD7A8E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EACF176A265585A000BD7A8E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EACF176D265585A000BD7A8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EACF176F265585A100BD7A8E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EACF1772265585A100BD7A8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -37,6 +35,72 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6780CE5D265588C400F6104B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EACF1766265585A000BD7A8E /* AppDelegate.swift */,
+				EACF1768265585A000BD7A8E /* SceneDelegate.swift */,
+				EACF176F265585A100BD7A8E /* Assets.xcassets */,
+				EACF1771265585A100BD7A8E /* LaunchScreen.storyboard */,
+				EACF1774265585A100BD7A8E /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		6780CE5E2655897700F6104B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6780CE6426558AD400F6104B /* Jaymond Storyboard */,
+				6780CE602655899400F6104B /* Storyboards */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6780CE5F2655898000F6104B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		6780CE602655899400F6104B /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				EACF176C265585A000BD7A8E /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		6780CE61265589DB00F6104B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				6780CE63265589FE00F6104B /* Model Controllers */,
+				6780CE62265589F600F6104B /* View Controllers */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		6780CE62265589F600F6104B /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		6780CE63265589FE00F6104B /* Model Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Model Controllers";
+			sourceTree = "<group>";
+		};
+		6780CE6426558AD400F6104B /* Jaymond Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Jaymond Storyboard";
+			sourceTree = "<group>";
+		};
 		EACF175A265585A000BD7A8E = {
 			isa = PBXGroup;
 			children = (
@@ -56,13 +120,10 @@
 		EACF1765265585A000BD7A8E /* GroupGame */ = {
 			isa = PBXGroup;
 			children = (
-				EACF1766265585A000BD7A8E /* AppDelegate.swift */,
-				EACF1768265585A000BD7A8E /* SceneDelegate.swift */,
-				EACF176A265585A000BD7A8E /* ViewController.swift */,
-				EACF176C265585A000BD7A8E /* Main.storyboard */,
-				EACF176F265585A100BD7A8E /* Assets.xcassets */,
-				EACF1771265585A100BD7A8E /* LaunchScreen.storyboard */,
-				EACF1774265585A100BD7A8E /* Info.plist */,
+				6780CE5F2655898000F6104B /* Models */,
+				6780CE5E2655897700F6104B /* Views */,
+				6780CE61265589DB00F6104B /* Controllers */,
+				6780CE5D265588C400F6104B /* Resources */,
 			);
 			path = GroupGame;
 			sourceTree = "<group>";
@@ -137,7 +198,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EACF176B265585A000BD7A8E /* ViewController.swift in Sources */,
 				EACF1767265585A000BD7A8E /* AppDelegate.swift in Sources */,
 				EACF1769265585A000BD7A8E /* SceneDelegate.swift in Sources */,
 			);
@@ -288,7 +348,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SP8PT7VLP6;
-				INFOPLIST_FILE = GroupGame/Info.plist;
+				INFOPLIST_FILE = GroupGame/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,7 +367,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SP8PT7VLP6;
-				INFOPLIST_FILE = GroupGame/Info.plist;
+				INFOPLIST_FILE = GroupGame/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
