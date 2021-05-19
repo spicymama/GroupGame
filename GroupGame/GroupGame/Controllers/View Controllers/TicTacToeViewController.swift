@@ -2,7 +2,11 @@
 //  TicTacToeViewController.swift
 //  GroupGame
 //
+
 //  Created by JJB on 5/19/21.
+
+//  Created by Jaymond Richardson on 5/19/21.
+
 //
 
 import UIKit
@@ -10,6 +14,7 @@ import UIKit
 class TicTacToeViewController: UIViewController {
     
     
+
     //MARK: - Properties
     //activePlayer = X
     var activePlayer = 1
@@ -36,16 +41,19 @@ class TicTacToeViewController: UIViewController {
     //MARK: - Actions
     @IBAction func playAgainButtonTapped(_ sender: Any) {
         //Reset the gameState to game start state
+
         gameState = [0, 0, 0, 0, 0, 0, 0, 0, 0]
         gameIsActive = true
         activePlayer = 1
         
+
         //Hide the reset button and winner label
         playAgainButton.isHidden = true
         winnerLabel.isHidden = true
         
         //Reset all the buttons
         for i in 1...9 {
+
             let button = view.viewWithTag(i) as! UIButton
             button.setImage(nil, for: UIControl.State())
         }
@@ -62,10 +70,11 @@ class TicTacToeViewController: UIViewController {
                 activePlayer = 2
             } else {
                 sender.setImage(UIImage(named: "o.png"), for: UIControl.State())
+
                 activePlayer = 1
             }
         }
-        
+
         //need to loop through the combinations for the winning combinations
         for combination in winningCombinations {
             //winning logic...
@@ -84,6 +93,7 @@ class TicTacToeViewController: UIViewController {
                 }
                 
                 //Allow user to play again
+
                 playAgainButton.isHidden = false
                 winnerLabel.isHidden = false
             }
@@ -93,6 +103,7 @@ class TicTacToeViewController: UIViewController {
         gameIsActive = false
         
         //If there is still an open spot : break out and keep playing
+
         for i in gameState {
             if i == 0 {
                 gameIsActive = true
@@ -103,8 +114,10 @@ class TicTacToeViewController: UIViewController {
     //If all spots are full and no person has won declare the draw
         if gameIsActive == false {
             winnerLabel.text = "It was a Draw"
+
             winnerLabel.isHidden = false
             playAgainButton.isHidden = false
         }
     }
 } //End of class
+
