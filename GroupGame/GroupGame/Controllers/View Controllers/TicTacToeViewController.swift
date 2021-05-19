@@ -13,7 +13,6 @@ class TicTacToeViewController: UIViewController {
     //MARK: - Properties
     //activePlayer = X
     var activePlayer = 1
-    
     var gameState = [0, 0, 0, 0, 0, 0, 0, 0, 0]
     
     //allow the game to pause after player has won
@@ -31,7 +30,6 @@ class TicTacToeViewController: UIViewController {
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     @IBAction func playAgainButtonTapped(_ sender: Any) {
@@ -68,8 +66,10 @@ class TicTacToeViewController: UIViewController {
         
         //need to loop through the combinations for the winning combinations
         for combination in winningCombinations {
+            
             //
             if gameState[combination[0]] != 0 && gameState[combination[0]] == gameState[combination[1]] && gameState[combination[1]] == gameState[combination[2]] {
+              
                 //Pauses the game after a winning combination found
                 gameIsActive = false
                 
@@ -106,5 +106,4 @@ class TicTacToeViewController: UIViewController {
             playAgainButton.isHidden = false
         }
     }
-    
 } //End of class

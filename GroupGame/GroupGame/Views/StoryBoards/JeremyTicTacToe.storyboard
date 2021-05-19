@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -17,16 +16,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ticTacToeBoard" translatesAutoresizingMaskIntoConstraints="NO" id="s0H-FS-K1u">
-                                <rect key="frame" x="20.5" y="288.5" width="373" height="373"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="s0H-FS-K1u" secondAttribute="height" multiplier="1:1" id="zwN-Xj-Twk"/>
-                                </constraints>
+                                <rect key="frame" x="20.5" y="291" width="373" height="368"/>
+                                <color key="backgroundColor" red="0.58188301320000002" green="0.21569153669999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="y2V-lg-cBf">
-                                <rect key="frame" x="32.5" y="304.5" width="347" height="96.5"/>
+                                <rect key="frame" x="32" y="307" width="348" height="96"/>
                                 <subviews>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d3A-za-2Zx" userLabel="x1">
-                                        <rect key="frame" x="0.0" y="0.0" width="96.5" height="96.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="96" height="96"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="96" id="SCz-St-OB8"/>
                                             <constraint firstAttribute="width" secondItem="d3A-za-2Zx" secondAttribute="height" multiplier="1:1" id="SR7-Ny-bJg"/>
@@ -36,7 +33,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TzT-1n-7PJ" userLabel="x2">
-                                        <rect key="frame" x="126.5" y="0.0" width="96.5" height="96.5"/>
+                                        <rect key="frame" x="126" y="0.0" width="96" height="96"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="96" id="hZi-e3-Rea"/>
                                         </constraints>
@@ -45,7 +42,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aww-0j-4lr" userLabel="x3">
-                                        <rect key="frame" x="253" y="0.0" width="94" height="96.5"/>
+                                        <rect key="frame" x="252" y="0.0" width="96" height="96"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="96" id="k8Z-rR-bVu"/>
                                         </constraints>
@@ -54,10 +51,6 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="aww-0j-4lr" firstAttribute="width" secondItem="aww-0j-4lr" secondAttribute="height" multiplier="1:1" id="Wgh-te-pYe"/>
-                                    <constraint firstItem="TzT-1n-7PJ" firstAttribute="width" secondItem="TzT-1n-7PJ" secondAttribute="height" multiplier="1:1" id="tDI-2t-9gx"/>
-                                </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="30" id="Bgk-t7-12K">
                                 <rect key="frame" x="32" y="427" width="348" height="96"/>
@@ -137,33 +130,41 @@
                                     <constraint firstItem="Bx0-B0-3ZH" firstAttribute="width" secondItem="Bx0-B0-3ZH" secondAttribute="height" multiplier="1:1" id="73Z-C9-74H"/>
                                 </constraints>
                             </stackView>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cAb-SZ-kUa">
-                                <rect key="frame" x="165" y="178" width="85" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="PLAY AGAIN"/>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(winnerLabel)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gOV-Ay-dlM">
+                                <rect key="frame" x="20.5" y="100.5" width="373" height="61.5"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="47"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cAb-SZ-kUa">
+                                <rect key="frame" x="99.5" y="186" width="215" height="60"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="sLh-fl-OHO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="30"/>
+                                <state key="normal" title="PLAY AGAIN">
+                                    <color key="titleColor" red="0.0" green="0.56031829119999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="playAgainButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="3S7-ID-azA"/>
                                 </connections>
                             </button>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="(winnerLabel)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gOV-Ay-dlM">
-                                <rect key="frame" x="154" y="120" width="105" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="1" green="0.2527923882" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="s0H-FS-K1u" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="0Nr-dS-jBG"/>
+                            <constraint firstItem="s0H-FS-K1u" firstAttribute="centerX" secondItem="gOV-Ay-dlM" secondAttribute="centerX" id="193-hl-Kul"/>
+                            <constraint firstItem="s0H-FS-K1u" firstAttribute="centerX" secondItem="cAb-SZ-kUa" secondAttribute="centerX" id="8BE-tW-KJq"/>
                             <constraint firstItem="1py-8m-Wat" firstAttribute="centerX" secondItem="y2V-lg-cBf" secondAttribute="centerX" id="BUj-Vk-8g3"/>
+                            <constraint firstItem="cAb-SZ-kUa" firstAttribute="top" secondItem="gOV-Ay-dlM" secondAttribute="bottom" constant="24" id="Dvo-du-fSG"/>
+                            <constraint firstItem="s0H-FS-K1u" firstAttribute="top" secondItem="cAb-SZ-kUa" secondAttribute="bottom" constant="45" id="JY0-OO-cKR"/>
                             <constraint firstItem="s0H-FS-K1u" firstAttribute="centerY" secondItem="vDu-zF-Fre" secondAttribute="centerY" id="R4Q-nF-dgu"/>
-                            <constraint firstItem="s0H-FS-K1u" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="Tc8-zZ-5IU"/>
-                            <constraint firstItem="Bgk-t7-12K" firstAttribute="centerX" secondItem="y2V-lg-cBf" secondAttribute="centerX" id="i8v-7A-bSB"/>
-                            <constraint firstItem="Bgk-t7-12K" firstAttribute="top" secondItem="y2V-lg-cBf" secondAttribute="bottom" constant="26" id="lUZ-Xv-IeQ"/>
-                            <constraint firstItem="y2V-lg-cBf" firstAttribute="leading" secondItem="s0H-FS-K1u" secondAttribute="leading" constant="12" id="lc7-34-XMS"/>
+                            <constraint firstItem="Bgk-t7-12K" firstAttribute="top" secondItem="y2V-lg-cBf" secondAttribute="bottom" constant="24" id="lUZ-Xv-IeQ"/>
                             <constraint firstItem="y2V-lg-cBf" firstAttribute="top" secondItem="s0H-FS-K1u" secondAttribute="top" constant="16" id="ocE-IV-GnZ"/>
                             <constraint firstItem="s0H-FS-K1u" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.9" id="t3e-vC-LXh"/>
+                            <constraint firstItem="gOV-Ay-dlM" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.9" id="vDG-4K-qhM"/>
                             <constraint firstItem="1py-8m-Wat" firstAttribute="top" secondItem="Bgk-t7-12K" secondAttribute="bottom" constant="24" id="z4J-X5-RYf"/>
                         </constraints>
                     </view>
@@ -198,8 +199,5 @@
     </scenes>
     <resources>
         <image name="ticTacToeBoard" width="1078" height="1068"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>
